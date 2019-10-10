@@ -1,5 +1,6 @@
 *~
 *.elc
+/anaconda-mode
 auto-save-list
 recentf
 savehist
