@@ -7,5 +7,3 @@
 
 ;; Set font size
 (set-face-attribute 'default nil :height 120)
-
-
