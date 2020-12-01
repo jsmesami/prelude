@@ -10,6 +10,8 @@
 * Auto-install `adoc-mode` for AsciiDoc files.
 * Add the `ag` package. It provides a nice alternative to `grep` and has nice Projectile integration.
 * Added additional configuration modules for WSL (`prelude-wsl`) and Windows (`prelude-windows`).
+* Add `ivy-prescient` to `prelude-ivy`.
+* Add `prelude-selectrum` module. Selectrum a simpler alternative to `ivy-mode`.
 
 ### Changes
 
@@ -22,8 +24,11 @@
 * Added `transient/` to `.gitignore`.
 * Fallback to `sample/prelude-modules.el` in the absence of a `prelude-modules.el` in one's personal folder.
 * [Ruby] Don't auto-insert coding comments.
+* Hide (via `diminish`) `editorconfig-mode`, `super-save`, `company`, `abbrev` and `ivy` in the modeline.
 
 ### Bugs fixed
+
+* [#1302](https://github.com/bbatsov/prelude/issues/1302): C-a should be bound to org-beginning-of-line in org-mode buffers
 
 ## 1.0.0 (2020-09-15)
 

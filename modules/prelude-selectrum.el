@@ -1,4 +1,4 @@
-;;; prelude-company.el --- company-mode setup
+;;; prelude-selectrum.el --- Selectrum setup
 ;;
 ;; Copyright © 2011-2020 Bozhidar Batsov
 ;;
@@ -9,7 +9,8 @@
 
 ;;; Commentary:
 
-;; company-mode config.
+;; Selectrum-related config.  Selectrum is a smart framework for minibuffer
+;; completion/filtering/selection (think of ivy/ido).
 
 ;;; License:
 
@@ -29,22 +30,25 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-(prelude-require-packages '(company))
+(prelude-require-packages '(selectrum selectrum-prescient))
 
-(require 'company)
+;;; Selectrum
+;;
+;; selectrum is a powerful alternative to the popular ido-mode and ivy-mode.
+
+(require 'selectrum)
+(require 'selectrum-prescient)
 (require 'diminish)
 
-(setq company-idle-delay 0.5)
-(setq company-show-numbers t)
-(setq company-tooltip-limit 10)
-(setq company-minimum-prefix-length 2)
-(setq company-tooltip-align-annotations t)
-;; invert the navigation direction if the the completion popup-isearch-match
-;; is displayed on top (happens near the bottom of windows)
-(setq company-tooltip-flip-when-above t)
+(selectrum-mode 1)
+(diminish 'selectrum-mode)
 
-(global-company-mode 1)
-(diminish 'global-company-mode)
+;; to make sorting and filtering more intelligent
+(selectrum-prescient-mode +1)
 
-(provide 'prelude-company)
-;;; prelude-company.el ends here
+;; to save your command history on disk, so the sorting gets more
+;; intelligent over time
+(prescient-persist-mode +1)
+
+(provide 'prelude-selectrum)
+;;; prelude-selectrum.el ends here
