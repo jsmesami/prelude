@@ -1,4 +1,11 @@
-(prelude-require-packages '(atom-one-dark-theme))
+(prelude-require-packages '(doom-themes doom-modeline))
 
-(load-theme 'atom-one-dark t)
+(disable-theme 'zenburn)
+
+(load-theme 'doom-vibrant t)
+
+(setq doom-themes-enable-bold t
+      doom-themes-enable-italic t)
+
+(doom-modeline-mode 1)
 
