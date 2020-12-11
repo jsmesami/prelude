@@ -7,7 +7,7 @@
 (add-hook 'clojure-mode-hook #'parinfer-mode)
 
 (defun clojure-mode-keybindings ()
-  (local-set-key (kbd "C-,") 'parinfer-toggle-mode)
+  (local-set-key (kbd "C-M-,") 'parinfer-toggle-mode)
   (local-set-key [tab] 'sp-indent-adjust-sexp)
   (local-set-key [backtab] 'sp-dedent-adjust-sexp))
 
