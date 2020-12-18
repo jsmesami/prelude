@@ -13,3 +13,9 @@
 
 (add-hook 'clojure-mode-hook #'clojure-mode-keybindings)
 
+(defun disable-smartparens ()
+  (smartparens-mode -1)
+  (smartparens-strict-mode -1))
+
+(add-hook 'smartparens-enabled-hook 'disable-smartparens t)
+
