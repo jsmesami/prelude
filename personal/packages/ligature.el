@@ -279,4 +279,3 @@ The changes are then made buffer-local."
 
 (provide 'ligature)
 ;;; ligature.el ends here
-
