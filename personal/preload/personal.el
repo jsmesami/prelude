@@ -11,3 +11,8 @@
 
 ;; No scratch buffer message
 (setq initial-scratch-message nil)
+
+;; LSP related setup
+(setq gc-cons-threshold (* 100 1024 1024)
+      read-process-output-max (* 1024 1024))
+
