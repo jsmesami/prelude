@@ -8,3 +8,6 @@
       lsp-enable-file-watchers nil
       lsp-signature-auto-activate nil)
  
+ ;; Disable "greater than 80" column highlighting
+ (setq whitespace-style '(face tabs empty trailing))
+ 
